@@ -1,17 +1,17 @@
 # docker-boot 项目使用说明
 
 ## 使用前提
-系统中已安装 git、docker、docker-compose
+系统中已安装 ``git``、``docker``、``docker-compose``
 
 ## 快速使用
 1. 检查系统是否已安装必要的软件
-```
+```bash
 git --version # 检查 git 是否安装
 docker version # 检查 docker 是否安装
 docker-compose version # 检查 docker-compose 是否安装
 ```
 2. git 克隆代码到本地
-```
+```bash
 git clone https://github.com/csthink/docker-boot.git
 ```
 
@@ -19,12 +19,12 @@ git clone https://github.com/csthink/docker-boot.git
 拷贝 env.example 并重命名.env 文件
 
 4. 启动容器
-```
-# 第一次会去 Docker Registry 下载相关镜像，推荐配置 Docker 的国内镜像源，推荐阿里云，DaoCloud或网易
+*** docker 第一次会去 Docker Registry 下载相关镜像,国内网络环境拉取镜像比较耗时，可以修改 Docker 的镜像源，推荐使用阿里云，DaoCloud或网易 ***
+```bash
 docker-compose up -d
 ```
 
-5. 验证服务是否正常启动
+1. 验证服务是否正常启动
 浏览器直接访问 [localhost](http://localhost/),看到 Hello,docker-boot! 即表明环境搭建成功！
 
 ## 目录结构
@@ -32,7 +32,7 @@ docker-compose up -d
 
 ## 提示
 ### 关闭容器并删除服务
-```
+```bash
 docker-compose down
 ```
 
@@ -46,7 +46,7 @@ exit
 
 ### nginx
 - 相关配置请修改 .env 文件和 ``docker/config/nginx/nginx.conf``
-```
+```bash
 # 以下操作是在宿主机中直接执行，不需要进入容器，也可以通过进入容器后只执行相关 linux 部分的命令，不需要输入 ``docker exec -it docker-boot_nginx_1``
 
 # 检查nginx服务是否启动
@@ -75,6 +75,6 @@ PORT: 6379
 PWD: 111111
 
 ### 日志操作
-```
+```bash
 docker logs --tail 5 --follow --timestamps docker-boot_nginx_1
 ```
