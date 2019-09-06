@@ -30,7 +30,7 @@ docker-compose up -d
 ## 目录结构
 
 
-## 相关命令
+## 提示
 ### 关闭容器并删除服务
 ```
 docker-compose down
@@ -44,7 +44,8 @@ docker exec -it docker—boot_nginx_1 sh
 exit
 ```
 
-### nginx 相关操作
+### nginx
+- 相关配置请修改 .env 文件和 ``docker/config/nginx/nginx.conf``
 ```
 # 以下操作是在宿主机中直接执行，不需要进入容器，也可以通过进入容器后只执行相关 linux 部分的命令，不需要输入 ``docker exec -it docker-boot_nginx_1``
 
@@ -57,6 +58,21 @@ docker exec -it docker-boot_nginx_1 nginx -t
 # 重启 nginx 服务
 docker exec -it docker-boot_nginx_1 nginx -s reload
 ```
+
+### Mysql 
+- 相关配置请修改 .env 文件和 ``docker/config/mysql/my.cnf``
+- mysql 初始连接信息:
+HOST: 127.0.0.1
+PORT: 3306
+USER: root
+PWD: 111111
+
+### redis
+- 相关配置请修改 .env 文件和 ``docker/config/redis/redis.conf``
+- redis 启用了 AOF 和密码
+HOST: 127.0.0.1
+PORT: 6379
+PWD: 111111
 
 ### 日志操作
 ```
