@@ -57,3 +57,12 @@ docker exec -it docker-boot_nginx_1 nginx -t
 # 重启 nginx 服务
 docker exec -it docker-boot_nginx_1 nginx -s reload
 ```
+
+### MySQL 相关操作
+*** 注意 ./docker/data/mysql 必须是一个空目录，否则可能会导致容器一直在重启 ***
+
+
+### 日志操作
+```
+docker logs --tail 5 --follow --timestamps docker-boot_nginx_1
+```

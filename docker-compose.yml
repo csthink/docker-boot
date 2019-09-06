@@ -15,5 +15,25 @@ services:
       TZ: "$TZ"
     restart: always
     networks:
-      - default
+      - frontend
+      - backend
     command: nginx -g 'daemon off;'
+
+  mysql:
+    image: mysql:${MYSQL_VERSION}
+    ports:
+      - "${MYSQL_PORT}:3306"
+    volumes:
+      - ${MYSQL_CONFIG_FILE}:/etc/mysql/conf.d/mysql.cnf:ro
+      - ${MYSQL_DATA_DIR}:/var/lib/mysql/:rw
+      - ${MYSQL_LOG_DIR}:/var/lib/logs/:rw
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+      TZ: "$TZ"
+    restart: always
+    networks:
+      - backend
+
+networks:
+    frontend:
+    backend:
