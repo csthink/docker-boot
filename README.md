@@ -24,7 +24,7 @@ git clone https://github.com/csthink/docker-boot.git
 docker-compose up -d
 ```
 
-4. 验证服务是否正常启动
+5. 验证服务是否正常启动
 浏览器直接访问 [localhost](http://localhost/),看到 Hello,docker-boot! 即表明环境搭建成功！
 
 ## 目录结构
