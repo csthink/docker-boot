@@ -19,7 +19,7 @@ git clone https://github.com/csthink/docker-boot.git
 拷贝 env.example 并重命名.env 文件
 
 4. 启动容器
-*** docker 第一次会去 Docker Registry 下载相关镜像,国内网络环境拉取镜像比较耗时，可以修改 Docker 的镜像源，推荐使用阿里云，DaoCloud或网易 ***
+***docker 第一次会去 Docker Registry 下载相关镜像,国内网络环境拉取镜像比较耗时，可以修改 Docker 的镜像源，推荐使用阿里云，DaoCloud或网易***
 ```bash
 docker-compose up -d
 ```
