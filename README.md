@@ -44,15 +44,15 @@ exit
 ```
 
 ### nginx
-- nginx 的访问日志文件: *** /docker/log/nginx/access.log ***
-- nginx 的错误日志文件: *** /docker/log/nginx/error.log ***
-- nginx 的主配置文件: *** /docker/config/nginx/nginx.conf ***
-- nginx 的虚拟主机配置文件目录: *** /docker/config/nginx/conf.d ***
-- nginx 的HTTPS 证书目录: *** /docker/config/nginx/certs ***
+- nginx 的访问日志文件: ***/docker/log/nginx/access.log***
+- nginx 的错误日志文件: ***/docker/log/nginx/error.log***
+- nginx 的主配置文件: ***/docker/config/nginx/nginx.conf***
+- nginx 的虚拟主机配置文件目录: ***/docker/config/nginx/conf.d***
+- nginx 的HTTPS 证书目录: ***/docker/config/nginx/certs***
 - 相关配置请修改 .env 文件和 nginx 的配置文件
   
 ```bash
-# 以下操作是在宿主机中直接执行，不需要进入容器，也可以进入容器后只执行相关 linux 部分的命令，不需要输入 ``docker exec -it nginx``
+# 以下操作是在宿主机中直接执行，不需要进入容器，也可以进入容器后只执行相关 linux 部分的命令，不需要输入 docker exec -it nginx
 
 # 检查nginx服务是否启动
 docker exec -it nginx ps aux | grep nginx
@@ -65,9 +65,9 @@ docker exec -it nginx nginx -s reload
 ```
 
 ### Mysql 
-- mysql 的数据目录: *** /docker/data/mysql ***
-- mysql 的慢查询日志: *** /docker/log/mysql/mysql.slow.log ***
-- mysql 的配置文件: *** /docker/config/mysql/my.cnf ***
+- mysql 的数据目录: ***/docker/data/mysql***
+- mysql 的慢查询日志: ***/docker/log/mysql/mysql.slow.log***
+- mysql 的配置文件: ***/docker/config/mysql/my.cnf***
 - mysql 初始连接信息(相关配置请修改 .env 文件和 mysql 的配置文件)
 
 ```bash
@@ -78,9 +78,9 @@ PWD: 111111
 ```
 
 ### redis
-- redis 的数据目录: *** /docker/data/redis ***
-- redis 的日志文件: *** /docker/data/redis/redis.log ***
-- redis 的配置文件: *** /docker/config/redis/redis.conf ***
+- redis 的数据目录: ***/docker/data/redis***
+- redis 的日志文件: ***/docker/data/redis/redis.log***
+- redis 的配置文件: ***/docker/config/redis/redis.conf***
 - redis 初始连接信息(相关配置请修改 .env 文件和 redis 的配置文件)
 
 ```
