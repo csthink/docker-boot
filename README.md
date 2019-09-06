@@ -15,14 +15,17 @@ docker-compose version # 检查 docker-compose 是否安装
 git clone https://github.com/csthink/docker-boot.git
 ```
 
-3. 启动容器
+3. 创建配置文件
+拷贝 env.example 并重命名.env 文件
+
+4. 启动容器
 ```
 # 第一次会去 Docker Registry 下载相关镜像，推荐配置 Docker 的国内镜像源，推荐阿里云，DaoCloud或网易
 docker-compose up -d
 ```
 
 4. 验证服务是否正常启动
-浏览器直接访问 localhost,看到 Hello,docker-boot! 即表明环境搭建成功！
+浏览器直接访问 [localhost](http://localhost/),看到 Hello,docker-boot! 即表明环境搭建成功！
 
 ## 目录结构
 
